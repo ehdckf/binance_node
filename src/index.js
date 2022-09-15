@@ -30,7 +30,7 @@ class BinanceSocket {
     this.socket.on("message", (stream) => {
       const p = JSON.parse(stream.toString()).p;
       console.log(this.key + " " + p);
-      this.redis.set(this.key, p, { EX: 60 });
+      this.redis.set(this.key, p);
     });
 
     this.socket.on("error", (err) => {
@@ -40,7 +40,7 @@ class BinanceSocket {
     });
 
     this.socket.on("close", () => {
-      console.lolg(this.key + " Socket Closed");
+      console.log(this.key + " Socket Closed");
       setTimeout(() => {
         this.socket_connect();
       }, 1000);
