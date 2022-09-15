@@ -1,5 +1,5 @@
 const { WebSocket } = require("ws");
-const { Redis } = require("./redis");
+const Redis = require("./redis");
 const config = require("./config");
 
 class BinanceSocket {

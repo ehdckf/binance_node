@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const Pool = require("./pool");
 const config = require("./config");
 const { timeout_sec, n_conn, host, port } = config.inst().redis;
@@ -62,12 +63,12 @@ class Redis {
   }
 }
 
-const RedisPool = new Pool(
-  n_conn,
-  () => new Redis(),
-  async (c) => {
-    await c.connect();
-  }
-);
+// const RedisPool = new Pool(
+//   n_conn,
+//   () => new Redis(),
+//   async (c) => {
+//     await c.connect();
+//   }
+// );
 
-module.exports = { RedisPool, Redis };
+module.exports = Redis;
