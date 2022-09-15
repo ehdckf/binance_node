@@ -10,13 +10,8 @@ class BinanceSocket {
   }
 
   async init() {
-    this.redis_connect()
-      .then(() => {
-        this.socket_connect();
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    await this.redis_connect();
+    this.socket_connect();
   }
 
   async redis_connect() {
@@ -48,14 +43,14 @@ class BinanceSocket {
     });
 
     this.socket.on("close", () => {
-      // console.log(this.key + " Socket Closed");
+      console.log(this.key + " Socket Closed");
       setTimeout(() => {
         this.socket_connect();
       }, 1000);
     });
 
     this.socket.on("open", () => {
-      // console.log(this.key + " Socket Opened!");
+      console.log(this.key + " Socket Opened!");
     });
   }
 }
