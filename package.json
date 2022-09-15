@@ -1,0 +1,46 @@
+{
+  "name": "public_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx pkg ."
+  },
+  "bin": {
+    "node_public": "./src/index.js"
+  },
+  "pkg": {
+    "scripts": "./src/index.js",
+    "targets": [
+      "node14-linux-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FunnyFig/public_node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FunnyFig/public_node/issues"
+  },
+  "homepage": "https://github.com/FunnyFig/public_node#readme",
+  "dependencies": {
+    "@funnyfig/comheadjs": "^1.0.2",
+    "axios": "^0.27.2",
+    "bignumber.js": "^9.1.0",
+    "crypto": "^1.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "redis": "^4.3.1",
+    "ws": "^8.4.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^4.2.1",
+    "pkg": "^5.5.1"
+  }
+}
