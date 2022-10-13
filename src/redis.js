@@ -40,7 +40,7 @@ class Redis {
                 let [key, value, _option] = args;
                 key = Redis.key(`${key}`);
                 const option = {};
-                option.EX = timeout_sec;
+                // option.EX = timeout_sec;
 
                 // _option = _option || {};
                 // Object.keys(_option).forEach((k) => {
