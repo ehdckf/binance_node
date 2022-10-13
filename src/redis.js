@@ -6,7 +6,7 @@ const { createClient } = require("redis");
 const path = require("path");
 
 class Redis {
-        static root_key = "BINANCESTREAM";
+        static root_key = "ADMIN_NODE";
         constructor() {
                 this.redis = createClient(port, host);
                 this.redis.on("connect", () => {
