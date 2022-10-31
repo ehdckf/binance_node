@@ -1,7 +1,4 @@
 {
-	"frontend": {
-		"port": 5003
-	},
 	"redis": {
 		"timeout_min": 2,
 		"n_conn": 16,

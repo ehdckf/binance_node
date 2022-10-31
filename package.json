@@ -4,11 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "build": "npx pkg ."
   },
-
+  "bin": {
+    "binance_node": "./src/index.js"
+  },
+  "pkg": {
+    "scripts": "./src/index.js",
+    "targets": [
+      "node16-linux-x64"
+    ],
+    "outputPath": "dist"
+  },
   "author": "ehdckf",
-
   "dependencies": {
     "eslint-config-prettier": "^8.5.0",
     "redis": "^4.3.1",
