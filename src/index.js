@@ -30,7 +30,7 @@ class BinanceSocket {
                 this.socket.on("message", (stream) => {
                         try {
                                 const p = JSON.parse(stream.toString()).p;
-                                // console.log(this.key + " " + p);
+                                console.log(this.key + " " + p);
 
                                 this.redis.set(this.key, p);
                         } catch (e) {

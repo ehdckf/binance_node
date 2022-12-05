@@ -9,6 +9,7 @@
 		"ethusdt",
 		"soleth",
 		"solusdt",
+
 		"aaveeth",
 		"aaveusdt",
 		"bnbeth",
@@ -21,15 +22,16 @@
 		"manausdt",
 		"fttusdt",
 		"ftteth",
+
 		"maticeth",
 		"maticusdt",
 		"unieth",
 		"uniusdt",
-		"chzeth",
-		"chzusdt",
-		"snxeth",
-		"snxusdt",
-		"sandeth",
-		"sandusdt"
+		"leoeth",
+		"leousdt",
+		"croeth",
+		"crousdt",
+		"hbareth",
+		"hbarusdt"
 	]
 }
